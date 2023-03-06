@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.demo.db.HsqlAutoConfig,\
+com.demo.filestore.local.LocalFileStoreAutoConfig,\
+com.demo.filestore.network.NetworkFileStoreAutoConfig,\
+com.demo.java.java11.Java11AutoConfig

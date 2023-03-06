@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<body>
+
+<div class="row mb-3" th:fragment="application-scope-form">
+    <div class="col-lg-12">
+        <div class="card-body">
+            <h5 class="card-title">Application Scope Example</h5>
+
+            <p class="card-text">
+                Current value in session scope is: [<span th:text="${applicationScopeValue}"></span>]
+            </p>
+
+            <form action="#" th:action="@{/saveApplicationScopeValue}" method="post">
+                <div class="from-group">
+                    <label for="applicationScopeValue">Value to be set on request value</label>
+                    <input type="text" id="applicationScopeValue" name="applicationScopeValue"
+                    class="form-control mb-3" placeholder="" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

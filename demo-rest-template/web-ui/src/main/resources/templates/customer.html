@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+        th:replace="~{layouts/main :: layout(~{::main})}">
+
+<body>
+    <main role="main">
+        <div class="container">
+            <div class="col-md-12 py-4">
+                <h2>Customers List</h2>
+                <div th:replace="fragments/customerTable :: customerTable"></div>
+
+                <a href="#" th:href="@{/customers/create}" type="button" class="btn btn-primary">Add Customers</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

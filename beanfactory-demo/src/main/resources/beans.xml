@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- explicit dependency injection -->
+    <!--
+    <bean id="student" class="com.demo.Student">
+        <constructor-arg name="name" value="LP"/>
+        <constructor-arg name="age" value="25"/>
+        <constructor-arg name="school" value="DRC"/>
+        <property name="address" value="address"/>
+    </bean>
+    <bean id="address" class="com.demo.Address"/>
+    -->
+
+    <!-- implicit dependency injection, byType is default for autowire -->
+    <!--
+    <bean id="student" class="com.demo.Student" autowire="byType">
+        <constructor-arg name="name" value="LP" />
+        <constructor-arg name="age" value="25"/>
+        <constructor-arg name="school" value="DRC"/>
+    </bean>
+
+    <bean id="address" class="com.demo.Address"/>
+    -->
+
+    <context:annotation-config></context:annotation-config>
+    <context:component-scan base-package="com.demo"/>
+</beans>
